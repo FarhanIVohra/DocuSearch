@@ -1,6 +1,7 @@
 import os
 import re
 import time
+import uvicorn
 from typing import Any, Dict, List, Optional
 from fastapi import FastAPI, HTTPException, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
@@ -342,4 +343,14 @@ async def search_document(q: str = Query(..., min_length=1)):
         total_matches=sum(len(m.positions) for m in matches),
         time_ms=elapsed_ms,
         cache="MISS"
+    )
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=port,
+        log_level="info"
     )
