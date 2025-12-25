@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'https://docusearch-x52w.onrender.com';
 
 const fileInput = document.getElementById('file-input');
 const uploadButton = document.getElementById('upload-button');
