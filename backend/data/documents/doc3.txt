@@ -1,0 +1,8 @@
+It is good that my work is completed
+You should clearly tell your teammate 👇
+
+“You will receive forward_index.
+Keys are stable doc_ids.
+Values are raw document text.
+Do NOT modify IDs.
+Do NOT reassign documents.”
